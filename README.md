@@ -23,7 +23,7 @@ python MS_SWD.py --img1 <img1_path> --img2 <img2_path>
 ```
 
 # Citation
-```c
+```
 @inproceedings{he2024ms-swd,
   title={Multiscale Sliced {Wasserstein} Distances as Perceptual Color Difference Measures},
   author={He, Jiaqi and Wang, Zhihua and Wang, Leon and Liu, Tsein-I and Fang, Yuming and Sun, Qilin and Ma, Kede},
