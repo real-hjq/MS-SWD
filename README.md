@@ -1,5 +1,5 @@
 # MS-SWD
-This is the repository of paper [Multiscale Sliced Wasserstein Distances as Perceptual Color Difference Measures](http://arxiv.org/abs/2407.10181).
+This is the repository of paper [Multiscale Sliced Wasserstein Distances as Perceptual Color Difference Measures](http://arxiv.org/abs/2407.10181), which has been accepted by ECCV 2024.
 
 ---
 # Requirement
