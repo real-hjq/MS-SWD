@@ -3,7 +3,7 @@ This is the repository of paper [Multiscale Sliced Wasserstein Distances as Perc
 
 ---
 # Requirement
-- Python>=2.6
+- Python>=3.0
 - Pytorch>=2.0
 
 # Useage
@@ -12,7 +12,7 @@ from MS-SWD import MS_SWD
 model = MS_SWD(num_scale=5, num_proj=128)
 # X: (N,C,H,W)
 # Y: (N,C,H,W)
-distance = Model(X, Y)
+distance = model(X, Y)
 ```
 or
 ```c
