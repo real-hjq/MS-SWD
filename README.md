@@ -8,7 +8,7 @@ This is the repository of paper [Multiscale Sliced Wasserstein Distances as Perc
 
 # Useage
 ```python
-from MS-SWD import MS-SWD
+from MS-SWD import MS_SWD
 model = MS_SWD(num_scale=5, num_proj=128)
 # X: (N,C,H,W)
 # Y: (N,C,H,W)
@@ -33,3 +33,5 @@ python MS_SWD.py --img1 <img1_path> --img2 <img2_path>
   url={http://arxiv.org/abs/2407.10181}
 }
 ```
+# Acknowledgements
+Part of the code is borrowed from [GPDM](https://github.com/ariel415el/GPDM), and srgb2lab comes from flip_loss.py in [ꟻLIP](https://github.com/NVlabs/flip). Sincerely thank them for their wonderful works.
