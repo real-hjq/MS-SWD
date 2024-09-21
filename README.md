@@ -4,7 +4,7 @@ This is the repository of paper [Multiscale Sliced Wasserstein Distances as Perc
 ---
 # Requirement
 - Python>=3.7
-- Pytorch>=2.0
+- Pytorch>=1.8
 
 # Useage
 ```python
