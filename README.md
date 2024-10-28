@@ -22,6 +22,16 @@ cd MS-SWD
 python MS_SWD.py --img1 <img1_path> --img2 <img2_path>
 ```
 
+# News
+The learned MS-SWD is available on [IQA-PyTorch](https://github.com/chaofengc/IQA-PyTorch)
+```python
+import pyiqa
+
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+cd_measure = pyiqa.create_metric('msswd', device = device)
+
+```
+
 # Citation
 ```
 @inproceedings{he2024ms-swd,
