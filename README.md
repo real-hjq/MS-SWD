@@ -24,13 +24,13 @@ python MS_SWD.py --img1 <img1_path> --img2 <img2_path>
 ```
 
 # News
-The learned MS-SWD is available on [IQA-PyTorch](https://github.com/chaofengc/IQA-PyTorch).
+The learned version of MS-SWD is available on [IQA-PyTorch](https://github.com/chaofengc/IQA-PyTorch).
 ```python
 import pyiqa
 import torch
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-cd_measure = pyiqa.create_metric('msswd', device = device)
+cd_measure = pyiqa.create_metric('msswd', device=device)
 
 ```
 
