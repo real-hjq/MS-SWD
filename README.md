@@ -9,6 +9,7 @@ This is the repository of paper [Multiscale Sliced Wasserstein Distances as Perc
 # Useage
 ```python
 from MS-SWD import MS_SWD
+
 model = MS_SWD(num_scale=5, num_proj=128)
 # X: (N,C,H,W)
 # Y: (N,C,H,W)
@@ -23,9 +24,10 @@ python MS_SWD.py --img1 <img1_path> --img2 <img2_path>
 ```
 
 # News
-The learned MS-SWD is available on [IQA-PyTorch](https://github.com/chaofengc/IQA-PyTorch)
+The learned MS-SWD is available on [IQA-PyTorch](https://github.com/chaofengc/IQA-PyTorch).
 ```python
 import pyiqa
+import torch
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 cd_measure = pyiqa.create_metric('msswd', device = device)
