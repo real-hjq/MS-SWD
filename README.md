@@ -6,9 +6,9 @@ This is the repository of paper [Multiscale Sliced Wasserstein Distances as Perc
 - Python>=3.7
 - Pytorch>=1.8
 
-# Useage
+# Usage
 ```python
-from MS-SWD import MS_SWD
+from MS_SWD import MS_SWD
 
 model = MS_SWD(num_scale=5, num_proj=128)
 # X: (N,C,H,W)
