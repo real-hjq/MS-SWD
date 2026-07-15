@@ -1,40 +1,46 @@
 # MS-SWD
-This is the repository of paper [Multiscale Sliced Wasserstein Distances as Perceptual Color Difference Measures](http://arxiv.org/abs/2407.10181), which has been accepted by ECCV 2024.
+This repository provides the official PyTorch implementation of the paper [Multiscale Sliced Wasserstein Distances as Perceptual Color Difference Measures](http://arxiv.org/abs/2407.10181), accepted at ECCV 2024.
 
 ---
-# Requirement
-- Python>=3.7
-- Pytorch>=1.8
+# Requirements
+- Python >= 3.7
+- PyTorch >= 1.8
+
+# Installation
+Clone the repository:
+```
+git clone https://github.com/real-hjq/MS-SWD.git
+cd MS-SWD
+```
 
 # Usage
+Python API:
 ```python
 from MS_SWD import MS_SWD
 
-model = MS_SWD(num_scale=5, num_proj=128)
+msswd_model = MS_SWD(num_scale=5, num_proj=128)
 # X: (N,C,H,W)
 # Y: (N,C,H,W)
-distance = model(X, Y)
+distance = msswd_model(X, Y)
 ```
-or
-```c
-git clone https://github.com/real-hjq/MS-SWD
-cd MS-SWD
-
+Command line:
+```bash
 python MS_SWD.py --img1 <img1_path> --img2 <img2_path>
 ```
 
-# News
-The learned version of MS-SWD is available on [IQA-PyTorch](https://github.com/chaofengc/IQA-PyTorch).
+# Learned MS-SWD
+A learned version of MS-SWD is available in [IQA-PyTorch](https://github.com/chaofengc/IQA-PyTorch).
 ```python
 import pyiqa
 import torch
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-cd_measure = pyiqa.create_metric('msswd', device=device)
+msswd_model = pyiqa.create_metric('msswd', device=device)
 
 ```
 
 # Citation
+If you find this work useful, please cite:
 ```
 @inproceedings{he2024ms-swd,
   title={Multiscale Sliced {Wasserstein} Distances as Perceptual Color Difference Measures},
@@ -46,4 +52,4 @@ cd_measure = pyiqa.create_metric('msswd', device=device)
 }
 ```
 # Acknowledgements
-Part of the code is borrowed from [GPDM](https://github.com/ariel415el/GPDM), and srgb2lab comes from flip_loss.py in [ꟻLIP](https://github.com/NVlabs/flip). Sincerely thank them for their wonderful works.
+Part of this implementation is adapted from [GPDM](https://github.com/ariel415el/GPDM). The 'srgb2lab' conversion code is adapted from flip_loss.py in [ꟻLIP](https://github.com/NVlabs/flip). We sincerely thank the authors for making their excellent work publicly available.
